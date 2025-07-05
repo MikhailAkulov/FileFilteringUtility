@@ -39,7 +39,7 @@ strings.txt.
 
 ### Структура утилиты:
 
-1. Ключевая сущность - класс [ProgramConfig](https://github.com/MikhailAkulov/FileFilteringUtility/blob/main/src/main/java/org/example/ProgramConfig.java), поля которого описывают конфигурацию.
+1. Ключевая сущность - класс [ProgramConfig](https://github.com/MikhailAkulov/FileFilteringUtility/blob/main/src/main/java/org/example/ProgramConfig.java), поля которого описывают состояние конфигурации.
 2. В первую очередь начинает работу [InputParameterHandler](https://github.com/MikhailAkulov/FileFilteringUtility/blob/main/src/main/java/org/example/InputParameterHandler.java) с единственным методом `configure()`, который анализирует массив входящих аргументов и передавая их конструктору `ProgramConfig` возвращает новый экземпляр конфигурации программы для исполнения.
 3. [UtilFileReader](https://github.com/MikhailAkulov/FileFilteringUtility/blob/main/src/main/java/org/example/UtilFileReader.java) с помощью метода `readFiles()` читает строки из списка файлов по очереди в соответствии с их перечислением в командной строке. 
 Для каждой считанной строки вызывает метод `distribute()` класса `StringAllocator`.
